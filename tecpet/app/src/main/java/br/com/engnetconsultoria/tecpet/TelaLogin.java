@@ -10,5 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class TelaLogin extends 
+public class TelaLogin extends AppCompatActivity {
+  
+}
+
 
