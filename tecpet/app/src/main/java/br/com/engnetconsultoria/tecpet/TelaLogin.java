@@ -47,7 +47,7 @@ public class TelaLogin extends AppCompatActivity {
           if(email.isEmpty() || senha.isEmpty()){
             Toast.makeText(getApplicationContext(), "Nenhum campo pode estar vazio.", Toast.LENGTH_LONG).show();
           }else{
-            url = "http://localhost/login/logar.php";
+            url = "http://localhost/login/login.php";
             
             parametros = "email="+ email + "&senha=" + senha;
             
