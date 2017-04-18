@@ -13,11 +13,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TelaLogin extends AppCompatActivity {
+public class TelaCadastro extends AppCompatActivity {
 
-    EditText editEmail1, editSenha1;
-    Button btnLogar;
-    TextView txtCadastro;
+    EditText editEmail2, editSenha2, editConfirmaSenha;
+    Button btnCadastrar;
+    TextView textTelaCadastro;
 
     String url = "";
     String parametrosUsuario = "";
@@ -25,16 +25,17 @@ public class TelaLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tela_login);
+        setContentView(R.layout.tela_cadastro);
 
-        editEmail1 = (EditText)findViewById(R.id.editEmail1);
-        editSenha1 = (EditText)findViewById(R.id.editSenha1);
-        btnLogar = (Button)findViewById(R.id.btnLogar);
-        txtCadastro = (TextView)findViewById(R.id.txtCadastro);
+        editEmail2 = (EditText)findViewById(R.id.editEmail2);
+        editSenha2 = (EditText)findViewById(R.id.editSenha2);
+        editConfirmaSenha = (EditText)findViewById(R.id.editConfirmaSenha);
+        btnCadastrar = (Button)findViewById(R.id.btnCadastrar);
+        textTelaCadastro = (TextView)findViewById(R.id.textTelaCadastro);
 
 
         //botão logar
-        btnLogar.setOnClickListener(new View.OnClickListener(){
+        btnCadastrar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
 
@@ -44,17 +45,20 @@ public class TelaLogin extends AppCompatActivity {
                 if(networkInfo != null && networkInfo.isConnected()){
                     //codigo
 
-                    String email = editEmail1.getText().toString();
-                    String senha = editSenha1.getText().toString();
+                    String email = editEmail2.getText().toString();
+                    String senha = editSenha2.getText().toString();
+                    String confirmaSenha = editConfirmaSenha.getText().toString();
+
 
                     if(email.isEmpty() || senha.isEmpty()){
                         Toast.makeText(getApplicationContext(), "Nenhum campo pode estar vazio.", Toast.LENGTH_LONG).show();
-                    }else{
-                        url = "http://engnetconsultoria.com.br/app/tecpet/login/login.php";
+                    }
+                    else{
+                        url = "http://engnetconsultoria.com.br/app/tecpet/login/cadastro.php";
 
                         parametrosUsuario = "email="+ email + "&senha=" + senha;
 
-                        new SolicitaDados().execute(url);
+                        new TelaCadastro.SolicitaDados().execute(url);
                     }
                 }else{
                     //erro ao conectar
@@ -65,15 +69,15 @@ public class TelaLogin extends AppCompatActivity {
 
             }
         });
-
-
-        txtCadastro.setOnClickListener(new View.OnClickListener(){
+        //clicar p/ voltar
+        textTelaCadastro.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent abreCadastro = new Intent(TelaLogin.this, TelaCadastro.class);
-                startActivity(abreCadastro);
+                Intent abreLogin = new Intent(TelaCadastro.this, TelaLogin.class);
+                startActivity(abreLogin);
             }
         });
+
 
     }
 
@@ -84,11 +88,12 @@ public class TelaLogin extends AppCompatActivity {
         }
         @Override
         protected void onPostExecute(String resultado){
-            if(resultado.contains("login_ok")){
-                Intent abreInicio = new Intent(TelaLogin.this, TecPet.class);
+            if(resultado.contains("cadastro_ok")){
+                Intent abreInicio = new Intent(TelaCadastro.this, TelaLogin.class);
+                Toast.makeText(getApplicationContext(), "Cadastrado com sucesso!", Toast.LENGTH_LONG).show();
                 startActivity(abreInicio);
             }else{
-                Toast.makeText(getApplicationContext(), "Usuário ou senha incorretos.", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Tente outro nome de usuário.", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -99,4 +104,3 @@ public class TelaLogin extends AppCompatActivity {
         finish();
     }
 }
-
