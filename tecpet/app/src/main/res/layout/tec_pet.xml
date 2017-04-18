@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#E6E7FA"
+    tools:context="engnetconsultoria.tecpet.TecPet"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btnSincronizar"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        android:elevation="0dp"
+        android:padding="10dp"
+        android:text="Sincronizar"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <Button
+        android:id="@+id/btnProgramar"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#5BA5E8"
+        android:text="Programar"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <Button
+        android:id="@+id/btnHistorico"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#5BA5E8"
+        android:text="Hitórico"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="212dp" />
+
+    <Button
+        android:id="@+id/btnDadosPet"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#5BA5E8"
+        android:text="Dados do Pet"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <Button
+        android:id="@+id/btnAddPet"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#5BA5E8"
+        android:text="Adicionar Pet"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <Button
+        android:id="@+id/btnDadosPessoais"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#064975"
+        android:text="Dados Pessoais"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+</LinearLayout>

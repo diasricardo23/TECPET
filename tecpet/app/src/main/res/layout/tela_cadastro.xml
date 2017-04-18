@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#5BA5E8"
+    tools:context="engnetconsultoria.tecpet.TelaCadastro">
+
+
+
+
+    <EditText
+        android:id="@+id/editEmail2"
+        android:layout_width="248dp"
+        android:layout_height="43dp"
+        android:background="#FFF"
+        android:ems="10"
+        android:hint="usuário"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <EditText
+        android:id="@+id/editSenha2"
+        android:layout_width="248dp"
+        android:layout_height="43dp"
+        android:background="#FFF"
+        android:ems="10"
+        android:hint="senha"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="324dp" />
+
+    <EditText
+        android:id="@+id/editConfirmaSenha"
+        android:layout_width="248dp"
+        android:layout_height="43dp"
+        android:background="#FFF"
+        android:ems="10"
+        android:hint="confirma senha"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="324dp"/>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:background="#064975"
+        android:text="Cadastrar"
+        android:textColor="#FFF"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <TextView
+        android:id="@+id/textTelaCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Já possui uma conta? Faça login!"
+        android:textColor="#fff" />
+</LinearLayout>

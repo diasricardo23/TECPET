@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#5BA5E8"
+    tools:context="engnetconsultoria.tecpet.TelaLogin"
+    android:weightSum="1">
+
+
+    <EditText
+        android:id="@+id/editEmail1"
+        android:layout_width="248dp"
+        android:layout_height="43dp"
+        android:background="#FFF"
+        android:ems="10"
+        android:hint="usuário"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <EditText
+        android:id="@+id/editSenha1"
+        android:layout_width="248dp"
+        android:layout_height="43dp"
+        android:background="#FFF"
+        android:ems="10"
+        android:hint="senha"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="324dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04" />
+
+    <Button
+        android:id="@+id/btnLogar"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:background="#064975"
+        android:text="Entrar"
+        android:textColor="#FFF"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <TextView
+        android:id="@+id/txtCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03"
+        android:padding="10dp"
+        android:text="Não possui uma conta? Cadastre-se!"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="454dp" />
+
+</LinearLayout>
