@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_User"
+        android:icon="@mipmap/ic_person_black_24dp"
+        android:title="Minha Página" />
+    <item
+        android:id="@+id/nav_EncicloPet"
+        android:icon="@mipmap/ic_pets_black_24dp"
+        android:title="EncicloPet" />
+
+    <item
+        android:id="@+id/nav_Config"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="Configurações" />
+
+</menu>
